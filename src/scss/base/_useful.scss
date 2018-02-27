@@ -1,0 +1,9 @@
+// object-fit fix - please check the file script.js
+.custom-object-fit {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    img {
+        opacity: 0;
+    }
+}

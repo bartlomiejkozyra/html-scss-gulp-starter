@@ -1,0 +1,68 @@
+@mixin transition($parameter: all, $time: .3s, $ease: ease) {
+    transition: $parameter $time $ease;
+}
+
+@mixin events {
+    &:hover, &:focus, &:active {
+        @content
+    }
+}
+
+@mixin center($position: both) {
+    position: absolute;
+    @if $position == 'vertical' {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @else if $position == 'horizontal' {
+      left: 50%;
+      transform: translate(-50%);
+    }
+    @else if $position == 'both' {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+@mixin flex($center: both) {
+    display: flex;
+    flex-wrap: wrap;
+    @if $center == 'vertical' {
+        align-items: center;
+      }
+      @else if $center == 'horizontal' {
+        justify-content: center;
+      }
+      @else if $center == 'both' {
+        justify-content: center;
+        align-items: center;
+      }
+}
+
+@mixin margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin objectfit {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin objectcontain {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    @if $raw-query {
+        $query: if( type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
+        @media #{$query} {
+            @content;
+        }
+    }
+}
