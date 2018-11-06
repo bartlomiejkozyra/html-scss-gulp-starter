@@ -1,6 +1,7 @@
 # html-scss-gulp-starter
 A helpful template for web design projects based on HTML, SCSS and Gulp.js
 
+
 ## Usage
 ### 1. Clone repo
 ```
@@ -22,6 +23,7 @@ npm install
 gulp
 ```
 
+
 ## Build
 In order to build the production version of your project run gulp build inside src directory of the cloned repo. The production version may be found in dist directory.
 
@@ -42,7 +44,7 @@ In order to build the production version of your project run gulp build inside s
 
 ### HTML
 The HTML template includes attached styles and scripts from libraries such as
-- Bootstrap 4.0.0 - [Link](]https://getbootstrap.com)
+- Bootstrap 4.0.0 - [Link](https://getbootstrap.com)
 - Slick 1.8.0 - [Link](http://kenwheeler.github.io/slick)
 - Fontawesome 5.0.6 - [Link](https://fontawesome.com)
 
