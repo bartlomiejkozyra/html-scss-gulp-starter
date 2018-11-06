@@ -10,7 +10,7 @@ git clone https://github.com/bartlomiejkozyra/html-scss-gulp-starter.git
 
 ### 2. Go inside cloned repo
 ```
-cd html-scss-gulp-starter/src
+cd html-scss-gulp-starter
 ```
 
 ### 3. Install all dependencies (you should have installed nodejs with npm)
